@@ -1,0 +1,17 @@
+.table__container {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    max-width: auto;
+    width: 60%;
+    margin: 0 auto;
+    font-family: 'PT Sans';
+    opacity: 0.65
+  }
+
+#columns__header{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+

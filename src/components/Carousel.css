@@ -1,0 +1,5 @@
+
+.image_box img{
+    height: 450px !important;
+    object-fit: cover;
+}

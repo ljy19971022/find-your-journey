@@ -1,0 +1,16 @@
+.searchform{
+    align-items: center;
+    justify-content: center;
+    margin: 0 15%;
+    padding: 5%;
+    font-size: center;
+    font-family: 'PT Sans', sans-serif;
+}
+
+.label{
+    font-weight: bold;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 1.2rem;
+    color: #035039
+    
+}
