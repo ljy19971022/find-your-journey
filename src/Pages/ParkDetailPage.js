@@ -13,7 +13,7 @@ function ParkDetailPage(prop) {
         console.log(res.data[0])
         console.log(res.data[0].addresses)
     })
-  },[])
+  },[prop.location.state])
 
   
   
