@@ -61,7 +61,7 @@ function ParkDetail(prop) {
                     <label>Description:</label>
                     <p>{data.description}</p>
                     <label>Address:</label>
-                    <p>{data.addresses[1].line1}, {data.addresses[1].city}, {data.addresses[1].stateCode}</p>
+                    <p>{data.addresses[0].line1}, {data.addresses[0].city}, {data.addresses[0].stateCode}</p>
                     <p>Direction Info: {data.directionsInfo}</p>
                     <a href={data.directionsUrl}>Park Website</a>
                     <br/>
