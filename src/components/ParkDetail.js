@@ -75,7 +75,7 @@ function ParkDetail(prop) {
                 <Tab.Pane eventKey="transportation">
                     <label>Airports Nearby {data.name}: </label>
                     {airportsData && <AirportsTable data={airportsData}/>}
-                    <label>EV Stations Nearby Nearby {data.name}: </label>
+                    <label>EV Stations Nearby {data.name}: </label>
                     {evstationsData && <EVStationTable data={evstationsData}/>}
                 </Tab.Pane>
             </Tab.Content>
