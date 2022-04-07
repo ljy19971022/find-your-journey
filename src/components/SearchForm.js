@@ -107,17 +107,17 @@ function SearchForm(props) {
       <Row className="mb-3">
       <Form.Group as={Col} controlId="species">
         <Form.Label className="label">Species Greater Than</Form.Label>
-        <Form.Control type="number" placeholder="50" onChange={handleSpeciesLimitChange}/>
+        <Form.Control type="number" placeholder="0" onChange={handleSpeciesLimitChange}/>
       </Form.Group>
 
       <Form.Group as={Col}  controlId="airports">
         <Form.Label className="label">Number of Airports Nearby</Form.Label>
-        <Form.Control type="number" placeholder="5" onChange={handleairportsLimitChange}/>
+        <Form.Control type="number" placeholder="0" onChange={handleairportsLimitChange}/>
       </Form.Group>
 
       <Form.Group as={Col}  controlId="evstation">
         <Form.Label className="label">Number of EV Stations Nearby</Form.Label>
-        <Form.Control type="num" placeholder="10" onChange={handleEVStationsLimitChange}/>
+        <Form.Control type="num" placeholder="0" onChange={handleEVStationsLimitChange}/>
       </Form.Group>
       </Row>
       <div className="d-grid gap-2">
