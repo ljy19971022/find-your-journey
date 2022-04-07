@@ -116,7 +116,7 @@ function SearchForm(props) {
       </Form.Group>
 
       <Form.Group as={Col}  controlId="evstation">
-        <Form.Label className="label">Number of EVStation Nearby</Form.Label>
+        <Form.Label className="label">Number of EV Stations Nearby</Form.Label>
         <Form.Control type="num" placeholder="10" onChange={handleEVStationsLimitChange}/>
       </Form.Group>
       </Row>
