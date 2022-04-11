@@ -68,7 +68,7 @@ function SearchForm(props) {
       const handleClick = (event) => {
         setLoading(true);
         event.preventDefault();
-        getMatchedParks(matchedName, matchedState, speciesLimit).then((res) => {
+        getMatchedParks(matchedName, matchedState, speciesLimit, airportsLimit, evstationsLimit).then((res) => {
           props.formResult(res)
         });
       }
