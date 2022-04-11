@@ -5,8 +5,8 @@ const getAllParks= async()=>{
     return res.json()
   }
 
-const getMatchedParks = async(name, state, numSpecies)=>{
-  var res = await fetch(`${API}search/parks?state=${state}&speciesmorethan=${numSpecies}&parkname=${name}`,{method: 'GET'})
+const getMatchedParks = async(name, state, numSpecies, airportsLimit, evstationsLimit)=>{
+  var res = await fetch(`${API}search/parks?state=${state}&speciesmorethan=${numSpecies}&parkname=${name}&airportsmorethan=${airportsLimit}&evsmorethan=${evstationsLimit}`,{method: 'GET'})
   return res.json()
 }
 
