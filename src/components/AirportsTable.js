@@ -16,7 +16,7 @@ function AirportsTable(props) {
               return(
                   <tr>
                       <td>{row.Name}</td>
-                      <td>{row.State_Abbr}</td>
+                      <td>{row.State}</td>
                   </tr>
               )
         })}
