@@ -59,15 +59,15 @@ const Navbar = ()=> {
                 Transportation Search
               </Link>
             </li> */}
-            <li className='nav-item'>
-              <Link
-                to='/mapviews'
-                className='nav-links'
-                onClick={closeMobileMenu}
-              >
-                MapViews
-              </Link>
-            </li>
+//             <li className='nav-item'>
+//               <Link
+//                 to='/mapviews'
+//                 className='nav-links'
+//                 onClick={closeMobileMenu}
+//               >
+//                 MapViews
+//               </Link>
+//             </li>
 
             {/* <li>
               <Link
