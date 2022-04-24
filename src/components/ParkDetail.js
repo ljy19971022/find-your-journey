@@ -4,10 +4,11 @@ import Tabs from 'react-bootstrap/Tabs'
 import Tab from 'react-bootstrap/Tab'
 import {Row, Col, Nav} from 'react-bootstrap/'
 import "./ParkDetail.css"
-import {getSpeciesInfo, getEVStationsInfo, getAirportsInfo} from '../fetcher'
+import {getSpeciesInfo, getEVStationsInfo, getAirportsInfo, getUniqueSpeciesInfo} from '../fetcher'
 import SpeciesTable from './SpeciesTable'
 import EVStationTable from './EVStationTable'
 import AirportsTable from './AirportsTable'
+import UniqueSpeciesTable from './UniqueSpeciesTable'
 
 function ParkDetail(prop) {
   const data = prop.data
@@ -16,10 +17,17 @@ function ParkDetail(prop) {
   const [speciesData, setSpeciesData] = useState()
   const [evstationsData, setEVStationsData] = useState()
   const [airportsData, setAirportsData] = useState()
+  const [uniqueSpeciesData, setUniqueSpeciesData] = useState()
   
   const handleSpeciesSearch=()=>{
     getSpeciesInfo(data.parkCode).then((res)=>{
         setSpeciesData(res.results)
+    })
+  }
+
+  const handleUniqueSpeciesSearch=()=>{
+    getUniqueSpeciesInfo(data.parkCode).then((res)=>{
+        setUniqueSpeciesData(res.results)
     })
   }
   
@@ -34,7 +42,7 @@ function ParkDetail(prop) {
     })
   }
 
-  useState(()=>{},[speciesData, airportsData, evstationsData])
+  useState(()=>{},[speciesData, airportsData, evstationsData, uniqueSpeciesData])
 
 
 
@@ -49,6 +57,9 @@ function ParkDetail(prop) {
                 </Nav.Item>
                 <Nav.Item>
                 <Nav.Link eventKey="species" onClick={handleSpeciesSearch}>Species</Nav.Link>
+                </Nav.Item>
+                <Nav.Item>
+                <Nav.Link eventKey="uniqueSpecies" onClick={handleUniqueSpeciesSearch}>Unique Species</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
                 <Nav.Link eventKey="transportation"onClick={handleTransportationSearch}>Transportation</Nav.Link>
@@ -71,6 +82,10 @@ function ParkDetail(prop) {
                 <Tab.Pane eventKey="species">
                     <label>Species Available at {data.name}: </label>
                     {speciesData && <SpeciesTable data={speciesData}/>}
+                </Tab.Pane>
+                <Tab.Pane eventKey="uniqueSpecies">
+                    <label>Unique Species to {data.name}, not found in any other National Parks: </label>
+                    {uniqueSpeciesData && <UniqueSpeciesTable data={uniqueSpeciesData}/>}
                 </Tab.Pane>
                 <Tab.Pane eventKey="transportation">
                     <label>Airports Nearby {data.name}: </label>

@@ -26,7 +26,7 @@ const columns = [
   },
   {
     id: 'numEVS',
-    label: 'EVStation Nearby',
+    label: 'EV Stations Nearby',
     minWidth: 170,
     align: 'right',
   },

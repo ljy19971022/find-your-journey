@@ -31,11 +31,17 @@ const getEVStationsInfo = async(id)=>{
   return res.json()
 }
 
+const getUniqueSpeciesInfo = async(id)=>{
+  var res = await fetch(`${API}uniquespecies/${id}`,{method: 'GET'})
+  return res.json()
+}
+
 export {
     getAllParks,
     getMatchedParks,
     getParkDetails,
     getSpeciesInfo,
     getAirportsInfo,
-    getEVStationsInfo
+    getEVStationsInfo,
+    getUniqueSpeciesInfo
 }
