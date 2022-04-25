@@ -25,15 +25,6 @@ const ParkSearch = () => {
     </div>
 
 
-
-
-
-
-
-
-
-
-
     // <div className="parksearch">
     //   <div className="form__container" id="cover">
     //   <h1 id='title'>Find your next destination!</h1>
