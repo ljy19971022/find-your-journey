@@ -50,36 +50,7 @@ const Navbar = ()=> {
                 Park Search
               </Link>
             </li>
-            {/* <li className='nav-item'>
-              <Link
-                to='/parksearch'
-                className='nav-links'
-                onClick={closeMobileMenu}
-              >
-                Transportation Search
-              </Link>
-            </li> */}
-//             <li className='nav-item'>
-//               <Link
-//                 to='/mapviews'
-//                 className='nav-links'
-//                 onClick={closeMobileMenu}
-//               >
-//                 MapViews
-//               </Link>
-//             </li>
-
-            {/* <li>
-              <Link
-                to='/sign-up'
-                className='nav-links-mobile'
-                onClick={closeMobileMenu}
-              >
-                Sign Up
-              </Link>
-            </li> */}
           </ul>
-          {/* {button && <Button buttonStyle='btn--outline'>SIGN UP</Button>} */}
         </div>
       </nav>
     </>
